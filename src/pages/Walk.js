@@ -40,7 +40,7 @@ export default function Walk() {
     <div style={styles.main}>
       <h1 style={styles.header}>How far did you walk?</h1>
       <div style={styles.input}><TextField required id="distance" label="Distance in miles" /></div>
-      <h1 style={styles.header}>For how long were you walking?</h1>
+      <h1 style={styles.header}>How long were you walking?</h1>
       <div style={styles.input}><TextField required id="time" label="Time in minutes" /></div>
       <div style={styles.submit}><Button variant="outlined" startIcon={<PublishIcon />} size="large">Submit</Button></div>
     </div>
