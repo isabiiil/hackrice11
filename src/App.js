@@ -5,8 +5,10 @@ import {
   Route,
   Link
 } from "react-router-dom";
-import Input from "./Input";
-import Home from "./Home"
+import Input from "./pages/Input";
+import Home from "./pages/Home"
+import Login from "./pages/Login";
+import Travel from "./pages/Travel"
 
 export default function App() {
   return (
@@ -21,7 +23,10 @@ export default function App() {
               <Link to="/input">Input</Link>
             </li>
             <li>
-              <Link to="/Login">Login</Link>
+              <Link to="/login">Login</Link>
+            </li>
+            <li>
+              <Link to="/travel">Travel</Link>
             </li>
           </ul>
         </nav>
@@ -29,15 +34,10 @@ export default function App() {
         {/* A <Switch> looks through its children <Route>s and
             renders the first one that matches the current URL. */}
         <Switch>
-          <Route path="/input">
-            <Input />
-          </Route>
-          <Route path="/Login">
-            <Users />
-          </Route>
-          <Route path="/">
-            <Home />
-          </Route>
+          <Route exact path="/input" component={Input} />
+          <Route exact path="/login" component={Login} />
+          <Route exact path="/travel" component={Travel} />
+          <Route exact path="/" component={Home} />
         </Switch>
       </div>
     </Router>
