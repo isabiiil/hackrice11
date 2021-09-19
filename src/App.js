@@ -6,15 +6,17 @@ import {
   Link
 } from "react-router-dom";
 import Input from "./pages/Input";
-import Home from "./pages/Home"
+import Home from "./pages/Home";
 import Login from "./pages/Login";
-import Travel from "./pages/Travel"
+import Travel from "./pages/Travel";
+// import Graph from "./components/Graph";
+import Walk from "./pages/Walk"
 
 export default function App() {
   return (
     <Router>
       <div>
-        <nav>
+        {/* <nav>
           <ul>
             <li>
               <Link to="/">Home</Link>
@@ -29,11 +31,13 @@ export default function App() {
               <Link to="/travel">Travel</Link>
             </li>
           </ul>
-        </nav>
+        </nav> */}
 
         {/* A <Switch> looks through its children <Route>s and
             renders the first one that matches the current URL. */}
         <Switch>
+          <Route exact path="/walk" component={Walk} />
+          {/* <Route exact path="/graph" component={Graph} /> */}
           <Route exact path="/input" component={Input} />
           <Route exact path="/login" component={Login} />
           <Route exact path="/travel" component={Travel} />
