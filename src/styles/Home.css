@@ -1,5 +1,5 @@
 body {
-  background-image: url("leafBG.jpg");
+  background-image: url("./../assets/leafBG.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   color: #FFF;

@@ -3,8 +3,8 @@ import {
   BrowserRouter as Router,
   Link
 } from "react-router-dom";
-import "./Home.css";
-import logo from "./icon.png"
+import "./../styles/Home.css";
+import logo from "./../assets/icon.png"
 
 export default function Home() {
   const styles = {
